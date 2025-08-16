@@ -1,4 +1,4 @@
-# 🍕 Algoritimo de Busca sem Informação
+# 🖥️ Algoritimo de Busca sem Informação
 
 ## Project info
 

@@ -2,7 +2,7 @@
 
 ## Project info
 
-> [PT/BR] Esse projeto foi desenvolvido em um conjunto como um apredizado do curso de introdução a IA na UFPB
+> [PT/BR] Esse projeto foi desenvolvido em um conjunto como um aprendizado do curso de introdução a IA na UFPB
 > 
 
 ## 🚀 Deployment

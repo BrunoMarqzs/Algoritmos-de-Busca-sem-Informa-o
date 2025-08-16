@@ -27,7 +27,7 @@ export const estadosRomenia = [
     { estado: 'Neamt', acoes: [acao('Iasi', 87)] }
 ];
 
-// Classe Nó
+
 export class No {
     constructor(estado, custo, pai, acao) {
         this.estado = estado;
@@ -57,7 +57,7 @@ export class No {
     }
 }
 
-// Classe Problema
+
 export class Problema {
     constructor(inicial, objetivo, espacoEstados) {
         this.inicial = inicial;
@@ -65,3 +65,4 @@ export class Problema {
         this.espacoEstados = espacoEstados;
     }
 }
+

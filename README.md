@@ -90,7 +90,7 @@ Este projeto foi desenvolvido como parte de uma atividade prática na disciplina
 
 ---
 
-## Authors Info
+## Informações dos Autores
 
 Bruno Marques , brunorodriguescvo@gmail.com
 Rafael Lima, rbl3@academico.ufpb.br

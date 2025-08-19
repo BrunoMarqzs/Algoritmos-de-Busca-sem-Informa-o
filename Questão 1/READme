@@ -1,1 +1,57 @@
-...
+## Busca em Largura (BFS) — Oradea → Craiova
+Grafo simplificado da Romênia (apenas conexões relevantes):
+Oradea → Zerind, Sibiu
+
+Zerind → Arad, Oradea
+Arad → Zerind, Sibiu, Timisoara
+Sibiu → Oradea, Arad, Fagaras, Rimnicu Vilcea
+Fagaras → Sibiu, Bucareste
+Rimnicu Vilcea → Sibiu, Craiova, Pitesti
+Craiova → Rimnicu Vilcea, Drobeta, Pitesti
+Drobeta → Craiova, Mehadia
+Mehadia → Lugoj, Drobeta
+Lugoj → Mehadia, Timisoara
+Timisoara → Arad, Lugoj
+Pitesti → Craiova, Rimnicu Vilcea, Bucareste
+Bucareste → Fagaras, Pitesti
+(...)
+
+## Passo a passo da BFS
+Início: Oradea
+Objetivo: Craiova
+    Fila: [Oradea]
+    Visitados: {Oradea}
+
+    Expande Oradea → {Zerind, Sibiu}
+    Fila: [Zerind, Sibiu]
+
+
+    Expande Zerind → {Arad}
+    Fila: [Sibiu, Arad]
+
+
+    Expande Sibiu → {Oradea, Arad, Fagaras, Rimnicu Vilcea} (Oradea já visitado)
+    Fila: [Arad, Arad, Fagaras, Rimnicu Vilcea]
+
+
+    Expande Arad (primeira vez) → {Zerind, Sibiu, Timisoara} (Zerind e Sibiu já visitados)
+    Fila: [Arad, Fagaras, Rimnicu Vilcea, Timisoara]
+
+
+    Expande Arad (segunda vez, ignorado pois já visitado)
+    Fila: [Fagaras, Rimnicu Vilcea, Timisoara]
+
+
+    Expande Fagaras → {Sibiu, Bucareste} (Sibiu já visitado)
+    Fila: [Rimnicu Vilcea, Timisoara, Bucareste]
+
+
+    Expande Rimnicu Vilcea → {Sibiu, Craiova, Pitesti}
+    Encontrado: Craiova
+
+## Caminho reconstruído:
+Oradea → Sibiu → Rimnicu Vilcea → Craiova
+
+## Conclusão
+A BFS garantiu o menor número de passos entre Oradea e Craiova.
+Caminho: Oradea → Sibiu → Rimnicu Vilcea → Craiova. Levando em consideração os valor do mapa da Romênia total foi de 377. Detalhado: Oradea(0) → Sibiu(151) → Rimnicu Vilcea(80) → Craiova(146), logo 377.

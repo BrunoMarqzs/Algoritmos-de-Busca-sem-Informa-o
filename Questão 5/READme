@@ -1,0 +1,57 @@
+## Árvore de DFS (Busca em Profundidade)
+DFS explora até o fim de cada ramo antes de voltar para tentar outro dígito.
+
+Cada nível da árvore representa uma letra a ser atribuída.
+Nível 1: S
+   9
+   8
+   7
+   ...
+Nível 2: E
+   Para cada valor de S, atribuímos E:
+     S=9 → E=5,0,1,... (exceto 9)
+     S=8 → E=0,1,... (exceto 8)
+Nível 3: N
+   Para cada combinação S,E:
+     S=9,E=5 → N=0,1,2,... (exceto 9,5)
+Nível 4: D
+   ...
+Nível 5: M
+   Lembre-se: M≠0
+Nível 6: O
+Nível 7: R
+Nível 8: Y
+   Checamos SEND + MORE == MONEY
+
+Exemplo de caminho DFS que leva à solução:
+S=9 → E=5 → N=6 → D=7 → M=1 → O=0 → R=8 → Y=2
+SEND = 9567
+MORE = 1085
+MONEY = 10652
+
+DFS vai fundo nesse caminho até terminar, só volta se não encontrar solução.
+Em DFS, a primeira solução encontrada pode ser a correta, mesmo que existam outras.
+
+## Árvore de BFS (Busca em Largura)
+BFS explora todos os mapeamentos parciais de uma letra antes de passar para a próxima letra.
+
+Cada nível da árvore corresponde a uma letra, mas todos os possíveis dígitos para essa letra são explorados antes de avançar.
+Nível 1: S
+   9, 8, 7, ...
+Nível 2: E
+   Para cada S:
+     S=9 → E=0,1,2,...,8
+     S=8 → E=0,1,2,...,7,9
+Nível 3: N
+   Para cada combinação S,E:
+     S=9,E=5 → N=0,1,2,3,4,6,7,8,9
+...
+Nível 8: Y
+   Checamos SEND + MORE == MONEY
+
+Como BFS encontra a solução:
+Explora todas as combinações de 1 letra atribuída.
+Depois todas de 2 letras atribuídas, e assim por diante.
+Quando chega a 8 letras atribuídas, verifica a equação.
+A primeira solução encontrada é a mesma que DFS neste caso específico.
+

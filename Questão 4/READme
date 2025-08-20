@@ -1,1 +1,5 @@
-...
+Ao rodarmos a BFS e a DFS para o par de cidades Oradea e Craiova obtivemos o mesmo resultado. Isso aconteceu porque o caminho até o destino era único e direto, então não havia possibilidade da DFS se perder em caminhos alternativos
+
+Ou seja, em problemas pequenos ou pouco ramificados, BFS e DFS podem gerar a mesma solução. Mas em problemas maiores (como Arad → Bucareste), vemos bem a diferença: a BFS encontra o menor caminho, enquanto a DFS pode encontrar um caminho mais longo.
+
+
